@@ -1,0 +1,104 @@
+/*--------- GENERAL----------*/
+
+* {
+	font-family: 'Arial', Gadget, sans-serif;
+}
+
+h1 {
+	text-align: center;
+	font-size: 2,7em;
+	font-weight: 800;
+}
+
+p {
+	font-size: 14px;
+	font-weight: 500;
+}
+
+/*---------->EN-TÊTE<----------*/
+
+header {
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	padding: 17px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	background-color: white;
+	opacity: 0.9;
+	font-size: 1.3em;
+	
+	
+}
+
+header div#logo  {
+	display: flex;
+	margin-left: 20px;
+}
+
+/*----MENU-----*/
+nav {
+	width: 80%;
+	margin-left: 20px;
+}
+
+
+
+ul li a {
+	display: list-item;
+	text-align: left;
+	text-decoration: none;
+	color: gray;
+}
+
+ul {
+	list-style-type: none;
+	width: 500px;
+	display: flex;
+	justify-content: space-around;
+	
+}
+
+/*---------->SLIDER<---------- */
+
+section#slider {
+	margin-top: 100px;
+	
+}
+
+/*---------->SERVICES<---------- */
+
+
+section#services {
+	width: 100%;
+	
+	
+}
+
+div.header_services {
+	text-align: center;
+}
+
+div.main_services {
+	display: flex;
+	flex-direction: row;
+	align-items: center;	
+}
+
+/*---------->PROJETS<---------- */
+
+section#projets {
+	width: 100%;
+	background-color: darkgrey
+	
+}
+
+/*---------->CONTACT<---------- */
+
+section#contact {
+	width: 90%;
+	
+}
