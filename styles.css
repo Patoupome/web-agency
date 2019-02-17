@@ -45,7 +45,7 @@ header {
 /*----LOGO-----*/
 
 
-div#logo img {
+#logo img {
 	width: auto;
 	height: auto;
 	margin-top: 0px;
@@ -85,9 +85,12 @@ nav a:hover {
 
 /*---------->SLIDER<---------- */
 
+#arrow_left {
+	top: 20px;
+	position: relative;
+}
 
-
-section#slider img {
+#slider img {
 	position: relative;
 	overflow: hidden;
 	margin-top: 70px;
@@ -95,7 +98,7 @@ section#slider img {
 
 }
 
-div#text_slider {
+#text_slider {
 	position: absolute;
 	top: 130px;
 	left: 218px;
@@ -103,15 +106,15 @@ div#text_slider {
 }
 
 #text_slider h2 {
-	font-size: 30px;
+	font-size: 2em;
 }
 
-div#text_slider p,
-div#text_slider h2 {
+#text_slider p,
+#text_slider h2 {
 	color: white;
 }
 
-div#text_slider a {
+#text_slider a {
 	text-decoration: none;
 	display: inline-block;
 	color: white;
@@ -158,13 +161,13 @@ section#slider img {
 
 @media screen and (max-width: 700px) {
 	
-	section#slider {
+	#slider {
 		display: flex;
 		flex-direction: column-reverse;
 	}
 
 
-	div#text_slider {
+	#text_slider {
 		position: static;
 		left: 10px;
 		text-align: center;
@@ -172,16 +175,16 @@ section#slider img {
 		
 	}
 
-	div#text_slider p,
-	div#text_slider h2 {
+	#text_slider p,
+	#text_slider h2 {
 		color: gray;
 	}
 	
-	section#slider img {
+	#slider img {
 		margin-top: 10px
 	}
 	
-	div#text_slider a {
+	#text_slider a {
 	width: 50%;
 }
 	
@@ -193,36 +196,68 @@ section#slider img {
 
 /*---------------- >LES 3 BLOCKS< ---------------- */
 
-div#blocks {
+#blocks {
 	width: 100%;
 }
 
 /*---------->SERVICES<---------- */
 
+.engagement {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
 
-section#services {
+}
+
+.spec {
+	margin-left: 30px;
+
+}
+
+.fa-stack {
+	padding-top: 30px;
+}
+
+.far fa-circle {
+	color: white;
+	border: 2px solid gray;
+	border-radius: 50%;
+}
+
+.fa-circle {
+	font-size: 14px;
+	position: absolute;
+	left: 50px;
+	top: 50px;
+	color: #5CADD3;
+	background-color: white;
+	padding: 3px;
+	margin-left: 2px;
+}
+
+#services {
 	padding: 10px 10%;
 	margin: 0px auto;
 }
 
 
-section#services img {
+#services img {
 	width: 100%;
 	height: 100%;
 }
 
-div.header_services p {
+.header_services p {
 	text-align: center;
 	padding: 0 10%;
 }
 
-div.main_services {
+.main_services {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 }
 
-div#description {
+#description {
 	display: flex;
 	flex-direction: column;
 }
@@ -230,22 +265,29 @@ div#description {
 
 @media screen and (max-width: 1250px) {
 
-	div.main_services {
+.main_services {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 	}
 }
 
+
+/*---------> ICONES <----------*/
+
+.fas fa-circle {
+	font-size: 10px;
+}
+
 /*---------->PROJETS<---------- */
 
-section#projets {
+#projets {
 	width: 100%;
 	background-color: #F5F5F5;
 
 }
 
-div.header_projets {
+.header_projets {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -254,13 +296,13 @@ div.header_projets {
 
 }
 
-div#menu_projets {
+#menu_projets {
 	display: flex;
 	justify-content: center;
 
 }
 
-div.header_projets ul {
+.header_projets ul {
 
 	margin: 45px 0px;
 	padding: 15px 0px;
@@ -270,37 +312,37 @@ div.header_projets ul {
 
 }
 
-div.header_projets ul li {
+.header_projets ul li {
 	display: inline;
 
 }
 
 
-div.header_projets a:hover {
+.header_projets a:hover {
 	background-color: #5CADD3;
 	border-bottom: 3px solid #468CAD;
 	color: white;
 
 }
 
-div.header_projets ul li:first-child a:hover {
+.header_projets ul li:first-child a:hover {
 	border-radius: 5px 0px 0px 5px;
 }
 
-div.header_projets ul li:last-child a:hover {
+.header_projets ul li:last-child a:hover {
 	border-radius: 0px 5px 5px 0px;
 }
 
 
 
-div.header_projets a {
+.header_projets a {
 	text-decoration: none;
 	color: #65696E;
 	padding: 15px 10px 15px 15px;
 }
 
 
-div.projets_photos {
+.projets_photos {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
@@ -350,17 +392,17 @@ figcaption p {
 
 
 
-section#contact {
+#contact {
 	width: 100%;
 	position: relative;
 
 }
 
-div#contact_info {
+#contact_info {
 	text-align: center;
 }
 
-div#map {
+#map {
 	background-color: #429393;
 }
 
@@ -369,7 +411,7 @@ iframe {
 }
 
 
-div#formulaire_contact {
+#formulaire_contact {
 	position: absolute;
 	background-color: #e6e6e6aa;
 	top: 200px;
@@ -386,7 +428,7 @@ input[type="text"],
 textarea,
 input[type="email"] {
 	width: 250px;
-	font-size: 15px;
+	font-size: 0.9em;
 }
 
 input[type="submit"] {
@@ -394,7 +436,7 @@ input[type="submit"] {
 	color: white;
 	background-color: #5CADD3;
 	border-radius: 5px;
-	font-size: 15px;
+	font-size: 1em;
 	border-bottom: 3px solid #4494BB;
 	height: 35px;
 }
@@ -402,13 +444,13 @@ input[type="submit"] {
 
 @media screen and (max-width: 700px) {
 
-	section#contact {
+	#contact {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 	}
 
-	div#formulaire_contact {
+	#formulaire_contact {
 		position: initial;
 		text-align: center;
 		margin: 20px;
@@ -449,7 +491,7 @@ input[type="submit"] {
 	}
 
 	nav a {
-		font-size: 0.9em;
+		font-size: 0.8em;
 		color: grey;
 		text-decoration: none;
 	}
