@@ -83,38 +83,72 @@ nav a:hover {
 }
 
 
-/*---------->SLIDER<---------- */
+/*---------->CAROUSEL<---------- */
 
-#arrow_left {
-	top: 20px;
+#carousel-box {
 	position: relative;
 }
 
-#slider img {
+/*--> ARROWS <-- */
+
+.arrows {
+	position: absolute;
+	top: 50%;
+}
+
+.arrow-left {
+	left: -40px;
+} 
+
+.arrow-right {
+	right: -40px;
+}
+
+.fa-angle-left, .fa-angle-right {
+	color: white;
+}
+
+.fa-angle-left {
+	padding-left: 30px;
+}
+
+.fa-angle-right {
+	padding-right: 30px;
+}
+
+.fa-circle {
+	color: rgba(128, 128, 128, 0.21);
+}
+
+/*-->IMAGE<--*/
+
+#carousel img {
 	position: relative;
 	overflow: hidden;
 	margin-top: 70px;
-
+	width: 100%;
 
 }
 
-#text_slider {
+/*-->TEXT CAROUSEL<--*/
+
+#text_carousel {
 	position: absolute;
 	top: 130px;
 	left: 218px;
 	text-align: left;
 }
 
-#text_slider h2 {
+#text_carousel h2 {
 	font-size: 2em;
 }
 
-#text_slider p,
-#text_slider h2 {
+#text_carousel p,
+#text_carousel h2 {
 	color: white;
 }
 
-#text_slider a {
+#text_carousel a {
 	text-decoration: none;
 	display: inline-block;
 	color: white;
@@ -124,67 +158,65 @@ nav a:hover {
 	margin-top: 4px;
 }
 
-#text_slider strong {
+#text_carousel strong {
 	color: #5CADD3;
 }
 
 
-section#slider img {
-	width: 100%;
+@media screen and (max-width: 991px) {
 
-}
-
-@media screen and (max-width: 1000px) {
-
-	div#text_slider {
+	#text_carousel {
 		position: absolute;
-		left: 10px;
+		left: 40px;
 	}
 
 
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 767px) {
 
-	section#slider img {
+	#carousel-box {
 		margin-top: 150px
 	}
+	
+	.arrows {
+	top: 40%;
+}
 
-	#text_slider h2 {
+	#text_carousel h2 {
 		font-size: 1.4em;
 	}
 
-	div#text_slider {
+	div#text_carousel {
 		top: 180px;
 	}
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 767px) {
 	
-	#slider {
+	#carousel {
 		display: flex;
-		flex-direction: column-reverse;
+		flex-direction: column;
 	}
 
 
-	#text_slider {
+	#text_carousel {
 		position: static;
 		left: 10px;
 		text-align: center;
-		margin-top: 150px;
 		
 	}
 
-	#text_slider p,
-	#text_slider h2 {
+	#text_carousel p,
+	#text_carousel h2 {
 		color: gray;
 	}
 	
-	#slider img {
+	#carousel img {
 		margin-top: 10px
 	}
 	
-	#text_slider a {
+	#text_carousel a {
 	width: 50%;
 }
 	
@@ -200,40 +232,61 @@ section#slider img {
 	width: 100%;
 }
 
+.line-dot {
+}
+
+.line {
+	width: 160px;
+	height: 1px;
+	background-color: #EBEBEB;
+	position: relative;
+	margin: 0px auto;
+}
+
+.line-dot .fa-circle {
+	background-color: white;
+  color: #5CADD3;
+	border: 6px solid white;
+	position: absolute;
+	left: 40%;
+	top: -12px;
+	border-radius: 50%;
+}
+
 /*---------->SERVICES<---------- */
 
 .engagement {
 	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
+	flex-direction: column;
+}
 
+.engagement h3 {
+	margin-bottom: 05px;
+	
+}
+
+.engagement p {
+	margin-top: 0px;
 }
 
 .spec {
-	margin-left: 30px;
+display: flex;
+	flex-direction: row;
 
 }
 
-.fa-stack {
-	padding-top: 30px;
+.icon {
+	padding-top: 3%;
+	padding-left: 20%;
+	font-size: 2em;
+	
 }
 
-.far fa-circle {
-	color: white;
-	border: 2px solid gray;
-	border-radius: 50%;
-}
-
-.fa-circle {
-	font-size: 14px;
-	position: absolute;
-	left: 50px;
-	top: 50px;
+.fa-chart-line, .fa-cubes, .fa-chart-pie {
 	color: #5CADD3;
-	background-color: white;
-	padding: 3px;
-	margin-left: 2px;
+	
 }
+
 
 #services {
 	padding: 10px 10%;
@@ -263,7 +316,7 @@ section#slider img {
 }
 
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 991px) {
 
 .main_services {
 		display: flex;
@@ -302,43 +355,53 @@ section#slider img {
 
 }
 
-.header_projets ul {
+#menu_projets ul {
 
 	margin: 45px 0px;
 	padding: 15px 0px;
 	list-style-type: none;
 	background-color: #E5E5E5;
 	border-radius: 5px;
-
 }
 
-.header_projets ul li {
+#menu_projets ul li {
 	display: inline;
-
+	position: relative;
 }
 
 
-.header_projets a:hover {
+#menu_projets a:hover {
 	background-color: #5CADD3;
 	border-bottom: 3px solid #468CAD;
 	color: white;
-
 }
 
-.header_projets ul li:first-child a:hover {
+#menu_projets ul li:first-child a:hover {
 	border-radius: 5px 0px 0px 5px;
 }
 
-.header_projets ul li:last-child a:hover {
+#menu_projets ul li:last-child a:hover {
 	border-radius: 0px 5px 5px 0px;
 }
 
 
 
-.header_projets a {
+#menu_projets a {
 	text-decoration: none;
 	color: #65696E;
 	padding: 15px 10px 15px 15px;
+}
+
+i.fa-caret-down {
+	position: absolute;
+	top: 28px;
+	left: 43%;
+	color: #468CAD;
+	visibility: hidden;
+}
+
+#menu_projets ul li a:hover i.fa-caret-down {
+	visibility: visible;
 }
 
 
@@ -377,13 +440,15 @@ figcaption h3 {
 	margin-top: 10px;
 	margin-bottom: 0px;
 	font-weight: 900;
+	color: white;
 }
 
 figcaption p {
 	margin-top: 10px;
+	color: white;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 479px) {
 	
 
 }
@@ -442,7 +507,7 @@ input[type="submit"] {
 }
 
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 767px) {
 
 	#contact {
 		display: flex;
