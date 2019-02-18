@@ -11,7 +11,7 @@ body {
 
 h1 {
 	text-align: center;
-	font-size: 40px;
+	font-size: 2em;
 	font-weight: 800;
 	color: #272727;
 }
@@ -20,11 +20,23 @@ P {
 	color: #64686D;
 }
 
-h3, h2 {
+h3,
+h2 {
 	color: #272727;
 }
 
+@media screen and (max-width: 750px) {
 
+	h1 {
+		font-size: 1.6em;
+	}
+}
+
+@media screen and (max-width: 479px) {
+	h1 {
+		font-size: 1.3em;
+	}
+}
 
 /*---------->HEADER<----------*/
 
@@ -32,7 +44,7 @@ h3, h2 {
 header {
 	width: 100%;
 	position: fixed;
-	z-index: 1;
+	z-index: 2;
 	margin: 0px;
 	top: 0px;
 	display: flex;
@@ -79,7 +91,49 @@ nav a {
 
 nav a:hover {
 	border-top: 3px solid #5CADD3;
-	padding: 34px 18px; 
+	padding: 34px 18px;
+}
+
+
+@media screen and (max-width: 767px) {
+	header {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 10px;
+
+	}
+
+	header div#logo {
+		margin: 0px auto;
+	}
+
+	header div#logo img {
+		width: auto;
+		height: auto;
+		padding: 0px;
+	}
+
+	nav ul {
+		border-top: 2px solid #429393;
+		padding: 8px;
+		justify-content: center;
+		margin-bottom: 0px;
+	}
+
+	nav a {
+		font-size: 0.8em;
+		color: grey;
+		text-decoration: none;
+	}
+
+	nav a:hover {
+		padding: 13px 10px;
+		color: #429393;
+		font-weight: 900;
+		border-top: none;
+	}
+
 }
 
 
@@ -87,6 +141,7 @@ nav a:hover {
 
 #carousel-box {
 	position: relative;
+	overflow: hidden;
 }
 
 /*--> ARROWS <-- */
@@ -98,13 +153,14 @@ nav a:hover {
 
 .arrow-left {
 	left: -40px;
-} 
+}
 
 .arrow-right {
 	right: -40px;
 }
 
-.fa-angle-left, .fa-angle-right {
+.fa-angle-left,
+.fa-angle-right {
 	color: white;
 }
 
@@ -162,26 +218,26 @@ nav a:hover {
 	color: #5CADD3;
 }
 
-
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1024px) {
 
 	#text_carousel {
-		position: absolute;
-		left: 40px;
+		left: 35px;
+		top: 100px;
 	}
 
-
 }
+
 
 @media screen and (max-width: 767px) {
 
-	#carousel-box {
+
+	.arrows {
+		top: 60%;
+	}
+
+	#carousel img {
 		margin-top: 150px
 	}
-	
-	.arrows {
-	top: 40%;
-}
 
 	#text_carousel h2 {
 		font-size: 1.4em;
@@ -190,10 +246,8 @@ nav a:hover {
 	div#text_carousel {
 		top: 180px;
 	}
-}
 
-@media screen and (max-width: 767px) {
-	
+
 	#carousel {
 		display: flex;
 		flex-direction: column;
@@ -204,25 +258,19 @@ nav a:hover {
 		position: static;
 		left: 10px;
 		text-align: center;
-		
+
 	}
 
 	#text_carousel p,
 	#text_carousel h2 {
 		color: gray;
 	}
-	
-	#carousel img {
-		margin-top: 10px
-	}
-	
+
+
+
 	#text_carousel a {
-	width: 50%;
-}
-	
-
-
-
+		width: 100%;
+	}
 }
 
 
@@ -232,8 +280,6 @@ nav a:hover {
 	width: 100%;
 }
 
-.line-dot {
-}
 
 .line {
 	width: 160px;
@@ -245,7 +291,7 @@ nav a:hover {
 
 .line-dot .fa-circle {
 	background-color: white;
-  color: #5CADD3;
+	color: #5CADD3;
 	border: 6px solid white;
 	position: absolute;
 	left: 40%;
@@ -262,7 +308,7 @@ nav a:hover {
 
 .engagement h3 {
 	margin-bottom: 05px;
-	
+
 }
 
 .engagement p {
@@ -270,27 +316,54 @@ nav a:hover {
 }
 
 .spec {
-display: flex;
+	display: flex;
 	flex-direction: row;
-
 }
+
 
 .icon {
-	padding-top: 3%;
-	padding-left: 20%;
-	font-size: 2em;
-	
+	font-size: 2.2em;
 }
 
-.fa-chart-line, .fa-cubes, .fa-chart-pie {
+.s-circle {
 	color: #5CADD3;
-	
+	position: absolute;
+	top: 45px;
+	right: 21px;
+	z-index: 1;
+	background-color: white;
+	padding: 4px;
+	font-size: 12px
+}
+
+.fa-chart-line,
+.fa-cubes,
+.fa-chart-pie {
+	color: #5CADD3;
+
+}
+
+div.fa-stack {
+	width: 2.2em;
+}
+
+.icon .fa-circle {
+	border: 2px solid #F5F5F5;
+	border-radius: 50%;
+	color: white;
+}
+
+.icon-box {
+	padding-right: 30px;
+	padding-top: 20px;
+	position: relative;
+
 }
 
 
 #services {
 	padding: 10px 10%;
-	margin: 0px auto;
+	margin: 0px auto 20px 0px;
 }
 
 
@@ -308,21 +381,46 @@ display: flex;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	margin-top: 30px;
 }
 
 #description {
 	display: flex;
 	flex-direction: column;
+	width: 60%;
 }
 
 
 @media screen and (max-width: 991px) {
+	
+	#description {
+		width: 90%;
+	}
 
-.main_services {
+	.main_services {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 	}
+}
+
+@media screen and (max-width: 479px) {
+	.spec {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+	}
+	
+	.icon {
+	font-size: 1.5em;
+}
+	
+	.s-circle {
+		right: 140px;
+		top: 35px;
+		font-size: 0.5em;2
+	}
+	
 }
 
 
@@ -448,10 +546,19 @@ figcaption p {
 	color: white;
 }
 
-@media screen and (max-width: 479px) {
-	
 
+figcaption .eye {
+	position: absolute;
+	top: -20px;
+	right: 10px;
+	color: white;
+	background-color: #5CADD3;
+	border: 2px solid white;
+	border-radius: 50%;
+	padding: 10px;
 }
+
+@media screen and (max-width: 479px) {}
 
 /*---------->CONTACT<---------- */
 
@@ -523,49 +630,6 @@ input[type="submit"] {
 		right: 0px;
 		display: contents;
 		background-color: gray;
-	}
-
-}
-
-/*---------->RESPONSIVE HEADER MAX-WIDTH: 750PX<----------*/
-
-
-@media screen and (max-width: 750px) {
-	header {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		padding: 10px;
-
-	}
-
-	header div#logo {
-		margin: 0px auto;
-	}
-
-	header div#logo img {
-		width: auto;
-		height: auto;
-		padding: 0px;
-	}
-
-	nav ul {
-		border-top: 2px solid #429393;
-		padding: 8px;
-		justify-content: center;
-	}
-
-	nav a {
-		font-size: 0.8em;
-		color: grey;
-		text-decoration: none;
-	}
-
-	nav a:hover {
-		padding: 13px 10px;
-		color: #429393;
-		font-weight: 900;
-		border-top: none;
 	}
 
 }
