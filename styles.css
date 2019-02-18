@@ -269,7 +269,7 @@ nav a:hover {
 
 
 	#text_carousel a {
-		width: 100%;
+		width: 60%;
 	}
 }
 
@@ -392,7 +392,7 @@ div.fa-stack {
 
 
 @media screen and (max-width: 991px) {
-	
+
 	#description {
 		width: 90%;
 	}
@@ -410,17 +410,23 @@ div.fa-stack {
 		flex-direction: column;
 		text-align: center;
 	}
-	
-	.icon {
-	font-size: 1.5em;
-}
-	
-	.s-circle {
-		right: 140px;
-		top: 35px;
-		font-size: 0.5em;2
+
+	.icon-box {
+		width: 54px;
+		margin: 0 auto;
 	}
-	
+
+	.icon {
+		font-size: 1.5em;
+	}
+
+	.s-circle {
+		right: -4px;
+		top: 39px;
+		font-size: 0.5em;
+		position: absolute;
+	}
+
 }
 
 
@@ -499,9 +505,60 @@ i.fa-caret-down {
 }
 
 #menu_projets ul li a:hover i.fa-caret-down {
-	visibility: visible;
+	visibility: hidden;
 }
 
+
+@media screen and (max-width: 479px) {
+
+
+	#menu_projets ul {
+
+		margin: 45px 0px;
+		padding: 0px;
+		list-style-type: none;
+		border-radius: 5px;
+		display: inline-grid;
+		width: 100%;
+		
+	}
+
+	#menu_projets ul li {
+		display: inline;
+		padding: 5px 0;
+		border-bottom: 2px solid white;
+		width: 100%;
+		background-color: #5CADD3;
+	
+	}
+	
+	#menu_projets ul li:first-child {
+		border-radius: 8px 8px 0px 0px;
+	}
+	
+	#menu_projets ul li:last-child {
+		border-radius: 0px 0px 8px 8px;
+	}
+
+
+	#menu_projets a:hover {
+		color: white;
+		border-bottom: none;
+		padding: 0px;
+		margin: 0px
+	}
+
+
+
+	#menu_projets a {
+		text-decoration: none;
+		color: #65696E;
+	}
+
+
+}
+
+/* ---->BLOCK IMAGES<---- */
 
 .projets_photos {
 	display: flex;
