@@ -1,8 +1,8 @@
-/*--------- GENERAL----------*/
+/*---------> GENERAL <----------*/
 
 body {
 	font-family: 'Arial', Gadget, sans-serif;
-	margin: 0%
+	margin: 0%;
 }
 
 * {
@@ -25,7 +25,12 @@ h2 {
 	color: #272727;
 }
 
-@media screen and (max-width: 750px) {
+.header_below {
+	text-align: center;
+	padding: 0 10%;
+}
+
+@media screen and (max-width: 767px) {
 
 	h1 {
 		font-size: 1.6em;
@@ -36,15 +41,19 @@ h2 {
 	h1 {
 		font-size: 1.3em;
 	}
+
+	h3 {
+		font-size: 1em;
+	}
 }
 
-/*---------->HEADER<----------*/
+/*----------> HEADER <----------*/
 
 
 header {
 	width: 100%;
 	position: fixed;
-	z-index: 2;
+	z-index: 5;
 	margin: 0px;
 	top: 0px;
 	display: flex;
@@ -54,19 +63,12 @@ header {
 	padding: 10px;
 }
 
-/*----LOGO-----*/
-
 
 #logo img {
 	width: auto;
 	height: auto;
 	margin-top: 0px;
 }
-
-img {
-	padding: 0px;
-}
-
 
 /*----MENU-----*/
 
@@ -91,7 +93,7 @@ nav a {
 
 nav a:hover {
 	border-top: 3px solid #5CADD3;
-	padding: 34px 18px;
+
 }
 
 
@@ -104,15 +106,10 @@ nav a:hover {
 
 	}
 
-	header div#logo {
+	div#logo {
 		margin: 0px auto;
 	}
 
-	header div#logo img {
-		width: auto;
-		height: auto;
-		padding: 0px;
-	}
 
 	nav ul {
 		border-top: 2px solid #429393;
@@ -128,9 +125,6 @@ nav a:hover {
 	}
 
 	nav a:hover {
-		padding: 13px 10px;
-		color: #429393;
-		font-weight: 900;
 		border-top: none;
 	}
 
@@ -139,9 +133,19 @@ nav a:hover {
 
 /*---------->CAROUSEL<---------- */
 
-#carousel-box {
+#carousel_box {
 	position: relative;
 	overflow: hidden;
+	margin-top: 67px;
+}
+
+#blue_line {
+	position: absolute;
+	bottom: 4px;
+	height: 5px;
+	width: 100px;
+	background-color: #5CADD3;
+	z-index: 2;
 }
 
 /*--> ARROWS <-- */
@@ -176,12 +180,11 @@ nav a:hover {
 	color: rgba(128, 128, 128, 0.21);
 }
 
-/*-->IMAGE<--*/
+/*--> IMAGE <--*/
 
 #carousel img {
 	position: relative;
 	overflow: hidden;
-	margin-top: 70px;
 	width: 100%;
 
 }
@@ -219,23 +222,18 @@ nav a:hover {
 }
 
 @media screen and (max-width: 1024px) {
-
 	#text_carousel {
 		left: 35px;
 		top: 100px;
 	}
-
 }
 
-
 @media screen and (max-width: 767px) {
-
-
 	.arrows {
 		top: 60%;
 	}
 
-	#carousel img {
+	#carousel_box {
 		margin-top: 150px
 	}
 
@@ -266,19 +264,13 @@ nav a:hover {
 		color: gray;
 	}
 
-
-
 	#text_carousel a {
 		width: 60%;
 	}
 }
 
 
-/*---------------- >LES 3 BLOCKS< ---------------- */
-
-#blocks {
-	width: 100%;
-}
+/*----------------> LES 3 BLOCKS <---------------- */
 
 
 .line {
@@ -290,7 +282,6 @@ nav a:hover {
 }
 
 .line-dot .fa-circle {
-	background-color: white;
 	color: #5CADD3;
 	border: 6px solid white;
 	position: absolute;
@@ -299,19 +290,19 @@ nav a:hover {
 	border-radius: 50%;
 }
 
-/*---------->SERVICES<---------- */
+/*----------> SERVICES <---------- */
 
-.engagement {
+.engagements {
 	display: flex;
 	flex-direction: column;
 }
 
-.engagement h3 {
+.engagements h3 {
 	margin-bottom: 05px;
 
 }
 
-.engagement p {
+.engagements p {
 	margin-top: 0px;
 }
 
@@ -353,13 +344,12 @@ div.fa-stack {
 	color: white;
 }
 
-.icon-box {
+.icon_box {
 	padding-right: 30px;
 	padding-top: 20px;
 	position: relative;
 
 }
-
 
 #services {
 	padding: 10px 10%;
@@ -372,10 +362,6 @@ div.fa-stack {
 	height: 100%;
 }
 
-.header_services p {
-	text-align: center;
-	padding: 0 10%;
-}
 
 .main_services {
 	display: flex;
@@ -391,7 +377,7 @@ div.fa-stack {
 }
 
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1024px) {
 
 	#description {
 		width: 90%;
@@ -411,9 +397,11 @@ div.fa-stack {
 		text-align: center;
 	}
 
-	.icon-box {
-		width: 54px;
+	.icon_box {
+		width: 63px;
 		margin: 0 auto;
+		padding: 0px;
+		
 	}
 
 	.icon {
@@ -421,8 +409,8 @@ div.fa-stack {
 	}
 
 	.s-circle {
-		right: -4px;
-		top: 39px;
+		right: 0px;
+		top: 16px;
 		font-size: 0.5em;
 		position: absolute;
 	}
@@ -430,28 +418,16 @@ div.fa-stack {
 }
 
 
-/*---------> ICONES <----------*/
-
-.fas fa-circle {
-	font-size: 10px;
-}
 
 /*---------->PROJETS<---------- */
 
 #projets {
 	width: 100%;
 	background-color: #F5F5F5;
+	padding-top: 10px;
 
 }
 
-.header_projets {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	text-align: center;
-	align-items: center;
-
-}
 
 #menu_projets {
 	display: flex;
@@ -505,7 +481,7 @@ i.fa-caret-down {
 }
 
 #menu_projets ul li a:hover i.fa-caret-down {
-	visibility: hidden;
+	visibility: visible;
 }
 
 
@@ -520,7 +496,7 @@ i.fa-caret-down {
 		border-radius: 5px;
 		display: inline-grid;
 		width: 100%;
-		
+
 	}
 
 	#menu_projets ul li {
@@ -529,30 +505,33 @@ i.fa-caret-down {
 		border-bottom: 2px solid white;
 		width: 100%;
 		background-color: #5CADD3;
-	
+		text-align: center;
+
 	}
-	
+
 	#menu_projets ul li:first-child {
 		border-radius: 8px 8px 0px 0px;
 	}
-	
+
 	#menu_projets ul li:last-child {
 		border-radius: 0px 0px 8px 8px;
 	}
 
 
 	#menu_projets a:hover {
-		color: white;
 		border-bottom: none;
-		padding: 0px;
-		margin: 0px
+
 	}
 
-
+	#menu_projets ul li a:hover i.fa-caret-down {
+		visibility: hidden;
+	}
 
 	#menu_projets a {
 		text-decoration: none;
-		color: #65696E;
+		color: white;
+		padding: 0px;
+		margin: 0px;
 	}
 
 
@@ -560,11 +539,10 @@ i.fa-caret-down {
 
 /* ---->BLOCK IMAGES<---- */
 
-.projets_photos {
+.projets_images {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
-	text-align: left;
 	color: white;
 
 }
@@ -615,7 +593,6 @@ figcaption .eye {
 	padding: 10px;
 }
 
-@media screen and (max-width: 479px) {}
 
 /*---------->CONTACT<---------- */
 
@@ -627,16 +604,14 @@ figcaption .eye {
 
 }
 
-#contact_info {
-	text-align: center;
-}
-
 #map {
-	background-color: #429393;
+	background-color: #5CADD3;
+	height: 650px;
 }
 
 iframe {
 	opacity: 0.7;
+	width: 100%;
 }
 
 
@@ -653,6 +628,10 @@ iframe {
 	font-weight: bold;
 }
 
+#points {
+	border-bottom: 1px dotted #64686D;
+}
+
 input[type="text"],
 textarea,
 input[type="email"] {
@@ -661,7 +640,7 @@ input[type="email"] {
 }
 
 input[type="submit"] {
-	width=150px;
+	width: 150px;
 	color: white;
 	background-color: #5CADD3;
 	border-radius: 5px;
