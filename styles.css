@@ -130,6 +130,13 @@ nav a:hover {
 
 }
 
+@media screen and (max-width: 479px) {
+	nav a {
+		padding: 10px
+	}
+
+}
+
 
 /*---------->CAROUSEL<---------- */
 
@@ -148,11 +155,18 @@ nav a:hover {
 	z-index: 2;
 }
 
+@media screen and (max-width: 479px) {
+
+	#blue_line {
+		width: 50px;
+	}
+}
+
 /*--> ARROWS <-- */
 
 .arrows {
 	position: absolute;
-	top: 50%;
+	top: 45%;
 }
 
 .arrow-left {
@@ -230,7 +244,7 @@ nav a:hover {
 
 @media screen and (max-width: 767px) {
 	.arrows {
-		top: 60%;
+		top: 45%;
 	}
 
 	#carousel_box {
@@ -266,6 +280,14 @@ nav a:hover {
 
 	#text_carousel a {
 		width: 60%;
+	}
+
+
+}
+
+@media screen and (max-width: 479px) {
+	.arrows {
+		top: 30%;
 	}
 }
 
@@ -401,7 +423,7 @@ div.fa-stack {
 		width: 63px;
 		margin: 0 auto;
 		padding: 0px;
-		
+
 	}
 
 	.icon {
@@ -617,6 +639,7 @@ iframe {
 
 #formulaire_contact {
 	position: absolute;
+	background-color: white;
 	background-color: #e6e6e6aa;
 	top: 200px;
 	padding: 16px 16px 16px 16px;
@@ -632,6 +655,12 @@ iframe {
 	border-bottom: 1px dotted #64686D;
 }
 
+textarea {
+   font-family: inherit;
+   font-size: inherit;
+}
+
+
 input[type="text"],
 textarea,
 input[type="email"] {
@@ -645,8 +674,10 @@ input[type="submit"] {
 	background-color: #5CADD3;
 	border-radius: 5px;
 	font-size: 1em;
+	border: none;
 	border-bottom: 3px solid #4494BB;
 	height: 35px;
+	-webkit-appearance: none;
 }
 
 
@@ -665,7 +696,8 @@ input[type="submit"] {
 		width: 100%;
 		right: 0px;
 		display: contents;
-		background-color: gray;
+		background-color: #9f9f9f;
+		
 	}
 
 }
